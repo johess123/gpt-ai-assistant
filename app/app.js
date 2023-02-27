@@ -52,7 +52,7 @@ const handleEvents = async (events = []) => (
       ))
         .map((context) => (!context.error ? handleContext(context) : context)),
     ))
-      .filter((context) => context.messages.length > 0 && context.messages[0] == "/")
+      .filter((context) => context.messages.length > 0 && context.charAt(0).localeCompare("/") == )
       .map((context) => replyMessage(context)),
   ))
 );
