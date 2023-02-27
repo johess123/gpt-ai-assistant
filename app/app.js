@@ -52,7 +52,7 @@ const handleEvents = async (events = []) => (
       ))
         .map((context) => (!context.error ? handleContext(context) : context)),
     ))
-      .filter((context) => context.messages.length > 0 && context.messages.includes("/") == true)
+      .filter((context) => context.messages.length > 0)
       .map((context) => replyMessage(context)),
   ))
 );
